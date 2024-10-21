@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('marcas', function (Blueprint $table) {
             $table->id();
+            $table->string('nome',30)->unique();
+            $table->string('imagem',100)->comment('Logo da marca');
             $table->timestamps();
         });
     }
