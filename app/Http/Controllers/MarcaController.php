@@ -12,10 +12,9 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        //
+        $marcas = Marca::all();
+        return $marcas;
     }
-
-
     /**
      * Store a newly created resource in storage.
      */
@@ -30,7 +29,7 @@ class MarcaController extends Controller
      */
     public function show(Marca $marca)
     {
-        //
+        return $marca;
     }
 
     /**
