@@ -17,8 +17,7 @@ class ModeloController extends Controller
      */
     public function index(Request $request)
     {
-        $modelos = array();
-        // atributos = id,nome,imagem
+
         if($request->has('atributos_marca')){
             $atributos_marca = $request->atributos_marca;
             $modelos = $this->modelo->with('marca:id,'.$atributos_marca);
