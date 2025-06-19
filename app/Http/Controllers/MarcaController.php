@@ -35,7 +35,11 @@ class MarcaController extends Controller
             $marcaRepository->selectAtributosRegistrosRelacionadosRaw($request->atributos);
         }
 
-        return response()->json($marcaRepository->getResult());
+        return response()->json([
+            'status' =>  'success',
+            'data' => $marcaRepository->getResult(),
+            'message' => 'Lista de Marcas',
+        ]);
     }
     /**
      * Store a newly created resource in storage.
